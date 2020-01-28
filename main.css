@@ -1,0 +1,23 @@
+body {
+    background-color: green;
+    width: 100%;
+}
+
+#piesList {
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2%;
+    margin: 5%;
+}
+
+.pie {
+    text-align: center;
+    width: 25%;
+    margin: 1%;
+}
+
+img {
+    width: 100%;
+}
