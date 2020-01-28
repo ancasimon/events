@@ -108,7 +108,6 @@ const pieBuilder = () => {
     for (i = 0; i < pies.length; i++) {
         if (pies[i].isAvailable === true) {
             domString += '<div class="pie">';
-            domString += `<img src=${pies[i].imageUrl} alt=${pies[i].name} />`;
             domString += `<h2 class="pieItem">${pies[i].name}</h2>`;
             domString += `<h5 class="pieItem">\$${pies[i].price}</h5>`;
             if (pies[i].isOrganic === true) {
@@ -126,10 +125,11 @@ const pieBuilder = () => {
                 domString += `<p class="pieItem">Displaying a yummy ${pies[i].crust} crust, of course!</p>`;
             };
             domString += `<p class="pieItem">${pies[i].instructor} recommends you pair it with ${pies[i].drinkPairing}.</p>`;
+            domString += `<img src=${pies[i].imageUrl} alt=${pies[i].name} />`;
             domString += '</div>';
         };
     };
-    printToDom = (elementID, domString) => {
+    const printToDom = (elementID, domString) => {
         const selectedDiv = document.getElementById(elementID);
         selectedDiv.innerHTML = domString;
     };
